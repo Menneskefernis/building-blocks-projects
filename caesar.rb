@@ -16,7 +16,7 @@ def shiftChar(char, shift)
     if char.match(/[a-z]/)
         index = $letters.index(char).to_i
 
-        if index + shift > $letters.size
+        if index + shift > $letters.size - 1
             return set_case($letters[(index + shift) % $letters.size])
         end
 
@@ -42,5 +42,5 @@ def set_case(char)
     end
 end
 
-puts caesar_cipher("What a String!", 5)
+#puts caesar_cipher("What a String!", 5)
 
